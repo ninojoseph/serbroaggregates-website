@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products and Services - Serbro Aggregates</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1E2A4A; /* Dark Royal Blue background */
+            color: #FFFFFF; /* White text color */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Adjusted padding */
+            background-color: #0F162C; /* Darker shade of royal blue for header */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease; /* Smooth transition for scroll */
+        }
+        .logo {
+            height: 50px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 30px; /* Adjusted gap */
+            margin-right: 50px; /* Adjusted right margin */
+        }
+        .nav-buttons a {
+            text-decoration: none;
+            color: #FFFFFF; /* White text color */
+            font-size: 18px; /* Adjusted font size */
+            padding: 10px 15px; /* Adjusted padding */
+            transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav-buttons a:hover, .nav-buttons a:active {
+            color: #9AB8F4; /* Lighter shade of royal blue on hover */
+            transform: translateY(-2px); /* Move button up slightly on hover */
+        }
+        .content {
+            padding: 20px; /* Padding around content */
+            text-align: center;
+            margin-top: 100px; /* Top margin to push content down */
+            color: #FFFFFF; /* White text color for content */
+        }
+        .product-section {
+            margin-top: 40px; /* Top margin for each product section */
+            margin-bottom: 40px; /* Bottom margin for each product section */
+        }
+        .product-section h2 {
+            margin-bottom: 10px; /* Bottom margin for section title */
+        }
+        .product-section .product {
+            margin-top: 20px; /* Top margin for each product */
+            padding: 20px;
+            background-color: #0F162C; /* Darker shade of royal blue for product sections */
+            border: 1px solid #334D78; /* Border color */
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            text-align: center; /* Center align text */
+        }
+        .product-section .product img {
+            max-width: 80%; /* Maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure images don't affect text flow */
+            border-radius: 8px; /* Rounded corners for images */
+            margin: 0 auto 10px; /* Center images horizontally and add bottom margin */
+        }
+        .product-section .product p {
+            margin-top: 0; /* Remove top margin of paragraph */
+        }
+        .footer {
+            background-color: #0F162C; /* Darker shade of royal blue for footer */
+            color: #FFFFFF; /* White text color for footer */
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <img src="serbro logo.png" alt="Serbro Aggregates Logo" class="logo">
+        <div class="nav-buttons">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products and Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Products and Services</h1>
+        
+        <div class="product-section">
+            <h2>Filling Materials</h2>
+            <div class="product">
+                <h2>MOUTAIN ROCKS</h2>
+                <img src="rocks.jpg" alt="Aggregate Product 1">
+            </div>
+            <div class="product">
+                <h2>MOUNTAIN SOIL</h2>
+                <img src="soil.jpg" alt="Aggregate Product 2">
+            </div>
+            <!-- Add more products as needed -->
+             <div class="product">
+               <h2>BASE COARSE</h2>
+                <img src="coarse.jpg" alt="Aggregate Product 3">
+             </div>
+        </div>
+        
+        <div class="product-section">
+            <h2>Services Offered</h2>
+            <div class="product">
+               
+                <img src="deliver.jpg" alt="Service Offered 1">
+            </div>
+            <div class="product">
+                
+                <img src="quality.jpg" alt="Service Offered 2">
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+        
+        <!-- Add more content sections as needed -->
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Serbro Aggregates. All rights reserved.
+    </div>
+
+    <script>
+        // JavaScript to handle scroll behavior
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var header = document.getElementById("header");
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                header.style.transform = "translateY(-100%)";
+            } else {
+                header.style.transform = "translateY(0)";
+            }
+        }
+    </script>
+</body>
+</html>
